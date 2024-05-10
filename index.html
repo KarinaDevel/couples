@@ -7,15 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
+    <link rel="stylesheet" href="href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'">
 </head>
 
 <body>
     <div class="content">
         <div class="main">
             <div class="state">
-                <h1>Couples</h1>
-                <p>moves: 0 </p>
-                <p>time: 60 sec</p>
+                <h1 class="state__title">Couples</h1>
+                <p class="state__moves">moves: 0 </p>
+                <p class="state__time">time: 60 sec</p>
             </div>
             <div class="board">
                 <h2>Setting quantity of cards(from 2 to 6)</h2>
@@ -25,6 +26,17 @@
                 </form>
             </div>
 
+            <template id="gameTableTemplate">
+                <div class="table">
+                </div>
+                <button class="button table__button">Restart</button>
+            </template>
+            <template id="cardTemplate">
+                <div class="card">
+                    <i id="flippedIcon" class="flipped-icon fa"></i>
+                    <i></i>
+                </div>
+            </template>
 
         </div>
     </div>

@@ -1,5 +1,7 @@
-
+import{ createCard, createIconsArray, dublicateElements, shuffleArray } from "./cards";
+import{totalTime, interval, stopTimer, startTimer} from "./timer";
 function createBoard(columns, count) {
+    const gameBoard = document.querySelector('.board');
     gameBoard.textContent = '';
   
     const template = document.querySelector('#gameTableTemplate').cloneNode(true).content;
@@ -29,4 +31,5 @@ function createBoard(columns, count) {
   
     startTimer();
   }
+  
   export{ createBoard };

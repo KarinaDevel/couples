@@ -1,3 +1,5 @@
+import{totalTime, interval, stopTimer, startTimer} from "./timer";
+
 function gameLogic(card) {
     // Если время вышло - ничего не делаем
     if (totalTime === 0) return;

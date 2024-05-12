@@ -1,3 +1,4 @@
+import { gameLogic, isWin, couple, totalFlips } from "./gameLogic";
 function startTimer() {
     const time = document.querySelector('.state__time');
     const moves = document.querySelector('.state__moves');

@@ -1,3 +1,4 @@
+import{ gameLogic, isWin, couple, totalFlips } from "./gameLogic";
 function createCard(flippedIcon) {
     const template = document.querySelector('#cardTemplate').cloneNode(true).content;
   
@@ -37,4 +38,23 @@ function createCard(flippedIcon) {
     let duobleCards = dublicateElements(cards);
     return shuffleArray(duobleCards);
   }
-  export{ createCard, createIconsArray };
+  function dublicateElements(array) {
+    let newArr = [];
+    array.forEach((item) => {
+      newArr.push(item, item);
+    });
+    return newArr;
+  }
+  function shuffleArray(array) {
+    let currentIndex = array.length;
+    while (currentIndex != 0) {
+      currentIndex--;
+      const randomIndex = Math.floor(Math.random() * currentIndex);
+      const temp = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temp;
+    }
+  
+    return array;
+  }
+  export{ createCard, createIconsArray, dublicateElements, shuffleArray };
